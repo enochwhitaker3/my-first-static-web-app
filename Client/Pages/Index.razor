@@ -5,10 +5,19 @@
 <h1>Hello, world!</h1>
 
 Welcome to your new app.
+API result: @result
+
 
 
 @code{
-    public int clickCount = 0;
+    string result;
+    int times;
+
+        protected override async Task OnInitializedAsync()
+        {
+            var httpClient = new httpClient();
+            result = await httpClient.GetStringAsync("/api/httptrigger1?name=Enoch");
+        }
 
 
 }
