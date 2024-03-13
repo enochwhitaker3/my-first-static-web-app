@@ -15,7 +15,7 @@ API result: @result
 
         protected override async Task OnInitializedAsync()
         {
-            var httpClient = new httpClient();
+            var httpClient = new HttpClient();
             result = await httpClient.GetStringAsync("/api/httptrigger1?name=Enoch");
         }
 
